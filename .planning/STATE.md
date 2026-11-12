@@ -3,16 +3,16 @@ gsd_state_version: "1.0"
 current_phase: 1
 current_phase_name: Database, RLS, and Authentication Foundation
 status: executing
-stopped_at: Completed 01-01-PLAN.md
-last_updated: "2026-11-12T18:17:16.606Z"
+stopped_at: Completed 01-02-PLAN.md
+last_updated: "2026-11-12T18:23:37.620Z"
 last_activity: 2026-11-13
 last_activity_desc: Phase 1 execution started
-state_head: d4d2e7f1767348a7aba8cb8f54322c69d7ca2639
+state_head: 4ecfa11df17c3be32143f3d36ef89c74338648b0
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 6
-  completed_plans: 1
+  completed_plans: 2
   percent: 0
 ---
 
@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-11-12) and .gsd/SPEC.md (`FINALIZED`)
 ## Current Position
 
 Phase: 1 (Database, RLS, and Authentication Foundation) — EXECUTING
-Plan: 2 of 6
+Plan: 3 of 6
 Status: Ready to execute
 Last activity: 2026-11-13 — Phase 1 execution started
 
@@ -56,6 +56,7 @@ Progress: [░░░░░░░░░░] 0%
 | Plan | Duration | Tasks | Files |
 |------|----------|-------|-------|
 | Phase 01 P01 | 6 min | 3 tasks | 165 files |
+| Phase 01 P02 | 4 min | 3 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -65,6 +66,8 @@ Progress: [░░░░░░░░░░] 0%
 - Non-negotiable invariants enforced across all plans: integer cents + basis points (`10000 = 100%`), append-only `consignor_ledger` and `provenance_events`, `FOR UPDATE NOWAIT` checkout locking, and dual-state updates to `.gsd/STATE.md` + `.planning/STATE.md` + `docs/06_Plan.md`.
 - Plan 01-01 (`FOUND-01`, Task `1.1`): Initialized `resaleroute` Flutter project with locked `docs/04_TRD.md` dependencies, strict `analysis_options.yaml` rules, and feature-first Clean Architecture tree (`pubspec.lock` committed for deterministic builds).
 - Plan 01-02 (`FOUND-02`, Task `1.2`): Authored `supabase/migrations/20261112000001_initial_schema.sql` with `pgcrypto`/`pg_cron`, 6 enums, 9 tables (integer cents & bps CHECKs), 7 indexes, `handle_new_user()`, `sync_profile_claims()`, `prevent_profile_role_escalation()`, strict 9-table RLS, append-only revokes on `consignor_ledger`/`provenance_events`, and column-level `boutiques.webhook_secret` protection.
+- [Phase 01]: Hardcoded default 'shopper' role in handle_new_user() and blocked client role/boutique_id mutations via prevent_profile_role_escalation() (T-01-03).
+- [Phase 01]: Protected boutiques.webhook_secret via column-level grants; PostgREST/client queries must project explicit non-secret columns instead of SELECT * (T-01-05).
 
 ### Pending Todos
 
@@ -82,6 +85,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-11-12T18:17:16.558Z
-Stopped at: Completed 01-01-PLAN.md
+Last session: 2026-11-12T18:23:37.551Z
+Stopped at: Completed 01-02-PLAN.md
 Resume file: None

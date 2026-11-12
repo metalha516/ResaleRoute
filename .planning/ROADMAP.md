@@ -22,12 +22,12 @@ ResaleRoute delivers an end-to-end managed resale and consignment platform acros
   2. SQL migrations create all 6 enums, 9 tables, 7 indexes, `sync_profile_claims()` trigger, strict RLS (append-only `consignor_ledger` and `provenance_events`), and 4 atomic `SECURITY DEFINER` RPCs.
   3. `AppColors`, `AppTypography`, and `AppTheme` match `03_UI_Spec.md` with `ThemeMode.dark` default and zero drop shadows in dark mode.
   4. `app_router.dart` enforces role guards across all 12 routes using `authStateProvider` and `app_metadata.role`.
-**Plans**: 1/6 plans executed covering 5 atomic tasks (`1.1` – `1.5` from `docs/06_Plan.md`)
+**Plans**: 2/6 plans executed covering 5 atomic tasks (`1.1` – `1.5` from `docs/06_Plan.md`)
 
 Plans:
 **Wave 1**
 - [x] 01-01: Task 1.1 — Initialize Flutter project (`resaleroute`) with locked `pubspec.yaml` dependencies and folder structure (`04_TRD.md`)
-- [ ] 01-02: Task 1.2 — Apply `supabase/migrations/20261112000001_initial_schema.sql` (`05_Schema.md`)
+- [x] 01-02: Task 1.2 — Apply `supabase/migrations/20261112000001_initial_schema.sql` (`05_Schema.md`)
 
 **Wave 2** *(blocked on Wave 1 completion)*
 - [ ] 01-03: Task 1.3 — Apply `supabase/migrations/20261112000002_rpc_functions.sql` (`08_TDD.md`, `09_Sequence_Diagrams.md`)
@@ -95,7 +95,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Database, RLS, and Authentication Foundation | 1/6 | In Progress | - |
+| 1. Database, RLS, and Authentication Foundation | 2/6 | In Progress | - |
 | 2. Core Backend Logic, Calculators, and Edge Functions | 0/5 | Not started | - |
 | 3. Flutter UI Integration and Role Workflows | 0/6 | Not started | - |
 | 4. Edge-Case Hardening and Automated Tests | 0/3 | Not started | - |
