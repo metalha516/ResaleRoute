@@ -6,10 +6,10 @@
 
 ## Current Position
 - **Active Phase:** Phase 1 — Database, RLS, and Authentication Foundation
-- **Next Task:** `1.4` — Implement `app_colors.dart`, `app_typography.dart`, and `app_theme.dart` with exact dark/light hex tokens from `03_UI_Spec.md` (after `01-03` Task 3 live `supabase db push` checkpoint resolution)
-- **Status:** Executing Phase 1 (Plan 01-03 Tasks 1 & 2 complete; awaiting Task 3 blocking checkpoint for live `supabase db push`)
+- **Next Task:** `1.4` — Implement `app_colors.dart`, `app_typography.dart`, and `app_theme.dart` with exact dark/light hex tokens from `03_UI_Spec.md`
+- **Status:** Executing Phase 1 (Plan 01-03 complete; remote DB push deferred per user instruction to use Firebase later)
 - **Overall Progress:** `3 / 19` atomic tasks complete (`16%`)
-- **Last Activity:** `2026-11-12` — Completed Task `1.3` SQL authoring & local invariant verification (Plan `01-03`, `FOUND-03`): Authored `supabase/migrations/20261112000002_rpc_functions.sql` with all 6 `SECURITY DEFINER` RPCs (`complete_item_intake`, `submit_auth_verdict`, `process_order_and_split`, `open_return_dispute`, `resolve_dispute`, `settle_expired_escrows`), `FOR UPDATE NOWAIT`, integer-cent half-up rounding, `SYSTEM_ESCROW_CRON` NULL-safe SHA-256 chaining, and explicit `REVOKE ALL ... FROM PUBLIC` / `GRANT EXECUTE` hardening.
+- **Last Activity:** `2026-11-12` — Completed Plan `01-03` (`FOUND-03`, Task `1.3`): Authored `supabase/migrations/20261112000002_rpc_functions.sql` with all 6 `SECURITY DEFINER` RPCs and verified invariants locally; Task 3 live Supabase DB push skipped/deferred per user direction (`"No i will use firebase and i will connect it later. Please skip database work and continue other work as well"`).
 
 ## Non-Negotiable Invariants Checklist
 - [x] `SPEC.md` status locked as `FINALIZED`
@@ -22,7 +22,7 @@
 | :--- | :--- | :--- | :--- |
 | Phase 1 | 1.1 | Flutter project & folder structure (`04_TRD.md`) | `[x]` Complete |
 | Phase 1 | 1.2 | Initial PostgreSQL schema, enums, indexes, RLS (`05_Schema.md`) | `[x]` Complete |
-| Phase 1 | 1.3 | Atomic RPC functions (`08_TDD.md`, `09_Sequence_Diagrams.md`) | `[x]` Complete (SQL authored & verified; remote push checkpoint pending) |
+| Phase 1 | 1.3 | Atomic RPC functions (`08_TDD.md`, `09_Sequence_Diagrams.md`) | `[x]` Complete (SQL verified locally; remote DB push skipped/deferred for Firebase later) |
 | Phase 1 | 1.4 | Design tokens & theme (`03_UI_Spec.md`) | `[ ]` Pending |
 | Phase 1 | 1.5 | AuthRepository, authStateProvider, GoRouter guards (`02_AppFlow.md`) | `[ ]` Pending |
 | Phase 2 | 2.1 | Freezed domain models | `[ ]` Pending |
@@ -41,6 +41,6 @@
 | Phase 4 | 4.3 | Widget & integration tests (`test/widget/`) | `[ ]` Pending |
 
 ## Session Continuity
-- **Last session:** `2026-11-12T18:28:00Z`
-- **Stopped at:** Completed `01-03-PLAN.md` Tasks 1 & 2 (`supabase/migrations/20261112000002_rpc_functions.sql`); paused at Task 3 blocking checkpoint (`supabase db push`).
-- **Blockers:** Awaiting Supabase CLI linking and `supabase db push` (or explicit `deferred-local` confirmation).
+- **Last session:** `2026-11-12T18:35:00Z`
+- **Stopped at:** Completed `01-03-PLAN.md` (`FOUND-03`, Task `1.3`). Live Supabase DB push skipped/deferred per user direction (`"No i will use firebase and i will connect it later. Please skip database work and continue other work as well"`). Both PostgreSQL migrations remain verified locally on disk; backend connection/migration to Firebase is deferred until user connects it later.
+- **Blockers:** None (remote DB push explicitly deferred; proceeding with `01-04` design tokens & theme).
