@@ -22,7 +22,7 @@ ResaleRoute delivers an end-to-end managed resale and consignment platform acros
   2. SQL migrations create all 6 enums, 9 tables, 7 indexes, `sync_profile_claims()` trigger, strict RLS (append-only `consignor_ledger` and `provenance_events`), and 4 atomic `SECURITY DEFINER` RPCs.
   3. `AppColors`, `AppTypography`, and `AppTheme` match `03_UI_Spec.md` with `ThemeMode.dark` default and zero drop shadows in dark mode.
   4. `app_router.dart` enforces role guards across all 12 routes using `authStateProvider` and `app_metadata.role`.
-**Plans**: 5/6 plans executed covering 5 atomic tasks (`1.1` – `1.5` from `docs/06_Plan.md`)
+**Plans**: 6/6 plans executed covering 5 atomic tasks (`1.1` – `1.5` from `docs/06_Plan.md`)
 
 Plans:
 **Wave 1**
@@ -37,7 +37,7 @@ Plans:
 - [x] 01-05: Task 1.5a — Build `AppUser`/`UserRole`, `AuthRepository`, Riverpod `authStateProvider`, and 11 navigable route screen shells (`02_AppFlow.md`)
 
 **Wave 4** *(sequentially after 01-05)*
-- [ ] 01-06: Task 1.5b — Build `AuthLoginScreen`, `app_router.dart` (12 routes + 5-role guards), `app.dart`, `main.dart`, and `router_guard_test.dart` (`02_AppFlow.md`)
+- [x] 01-06: Task 1.5b — Build `AuthLoginScreen`, `app_router.dart` (12 routes + 5-role guards), `app.dart`, `main.dart`, and `router_guard_test.dart` (`02_AppFlow.md`)
 
 ### Phase 2: Core Backend Logic, Calculators, and Edge Functions
 **Goal**: Implement immutable Freezed models, pure Dart integer-cent/basis-point/SHA-256 calculators, and all three Supabase Deno Edge Functions.
@@ -95,7 +95,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Database, RLS, and Authentication Foundation | 5/6 | In Progress | - |
+| 1. Database, RLS, and Authentication Foundation | 6/6 | In Progress | - |
 | 2. Core Backend Logic, Calculators, and Edge Functions | 0/5 | Not started | - |
 | 3. Flutter UI Integration and Role Workflows | 0/6 | Not started | - |
 | 4. Edge-Case Hardening and Automated Tests | 0/3 | Not started | - |

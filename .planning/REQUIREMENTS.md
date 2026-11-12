@@ -10,7 +10,7 @@
 - [x] **FOUND-02**: Apply `20261112000001_initial_schema.sql` with 6 enums, 9 tables, 7 indexes, `sync_profile_claims()` trigger, and strict RLS (`05_Schema.md`, Task 1.2)
 - [x] **FOUND-03**: Apply `20261112000002_rpc_functions.sql` with atomic RPCs (`complete_item_intake`, `submit_auth_verdict`, `process_order_and_split`, `resolve_dispute`) (`08_TDD.md`, Task 1.3)
 - [x] **FOUND-04**: Implement `app_colors.dart`, `app_typography.dart`, and `app_theme.dart` matching Dark/Light tokens and zero dark-mode shadows (`03_UI_Spec.md`, Task 1.4)
-- [ ] **FOUND-05**: Build `AuthRepository`, Riverpod `authStateProvider`, and `app_router.dart` with role-based redirect guards across all 12 routes (`02_AppFlow.md`, Task 1.5)
+- [x] **FOUND-05**: Build `AuthRepository`, Riverpod `authStateProvider`, and `app_router.dart` with role-based redirect guards across all 12 routes (`02_AppFlow.md`, Task 1.5)
 
 ### Phase 2: Domain Models, Calculators & Edge Functions
 - [ ] **CORE-01**: Generate immutable Freezed models (`ItemModel`, `AuthenticationModel`, `LedgerEntryModel`, `ProvenanceEventModel`, `DisputeModel`) in `lib/features/*/domain/` (Task 2.1)
@@ -50,7 +50,7 @@
 | FOUND-02 | Phase 1 | 1.2 | Complete |
 | FOUND-03 | Phase 1 | 1.3 | Complete |
 | FOUND-04 | Phase 1 | 1.4 | Complete |
-| FOUND-05 | Phase 1 | 1.5 | Pending |
+| FOUND-05 | Phase 1 | 1.5 | Complete |
 | CORE-01 | Phase 2 | 2.1 | Pending |
 | CORE-02 | Phase 2 | 2.2 | Pending |
 | CORE-03 | Phase 2 | 2.3 | Pending |
