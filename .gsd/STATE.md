@@ -6,10 +6,10 @@
 
 ## Current Position
 - **Active Phase:** Phase 1 — Database, RLS, and Authentication Foundation
-- **Next Task:** `1.2` — Apply `supabase/migrations/20261112000001_initial_schema.sql` containing enums, tables, indexes, and RLS policies from `05_Schema.md`
-- **Status:** Executing Phase 1 (Plan 01-01 complete; proceeding to Plan 01-02)
-- **Overall Progress:** `1 / 19` atomic tasks complete (`5%`)
-- **Last Activity:** `2026-11-12` — Completed Task `1.1` (Plan `01-01`, `FOUND-01`): Flutter project `resaleroute` initialized, `pubspec.yaml` locked, Clean Architecture directory tree scaffolded, `flutter analyze` & `flutter test` passed.
+- **Next Task:** `1.3` — Apply `supabase/migrations/20261112000002_rpc_functions.sql` containing atomic stored procedures (`complete_item_intake`, `submit_auth_verdict`, `process_order_and_split`, `resolve_dispute`) from `08_TDD.md`
+- **Status:** Executing Phase 1 (Plan 01-02 complete; proceeding to Plan 01-03)
+- **Overall Progress:** `2 / 19` atomic tasks complete (`11%`)
+- **Last Activity:** `2026-11-12` — Completed Task `1.2` (Plan `01-02`, `FOUND-02`): Authored `supabase/migrations/20261112000001_initial_schema.sql` with extensions, 6 enums, 9 tables, 7 indexes, `sync_profile_claims()`, `on_auth_user_created`, `prevent_profile_role_escalation()`, strict 9-table RLS, and append-only revokes.
 
 ## Non-Negotiable Invariants Checklist
 - [x] `SPEC.md` status locked as `FINALIZED`
@@ -21,7 +21,7 @@
 | Phase | Task | Description | Status |
 | :--- | :--- | :--- | :--- |
 | Phase 1 | 1.1 | Flutter project & folder structure (`04_TRD.md`) | `[x]` Complete |
-| Phase 1 | 1.2 | Initial PostgreSQL schema, enums, indexes, RLS (`05_Schema.md`) | `[ ]` Pending |
+| Phase 1 | 1.2 | Initial PostgreSQL schema, enums, indexes, RLS (`05_Schema.md`) | `[x]` Complete |
 | Phase 1 | 1.3 | Atomic RPC functions (`08_TDD.md`, `09_Sequence_Diagrams.md`) | `[ ]` Pending |
 | Phase 1 | 1.4 | Design tokens & theme (`03_UI_Spec.md`) | `[ ]` Pending |
 | Phase 1 | 1.5 | AuthRepository, authStateProvider, GoRouter guards (`02_AppFlow.md`) | `[ ]` Pending |
@@ -41,6 +41,6 @@
 | Phase 4 | 4.3 | Widget & integration tests (`test/widget/`) | `[ ]` Pending |
 
 ## Session Continuity
-- **Last session:** `2026-11-12 23:28`
-- **Stopped at:** Project initialization complete; `.gsd/` and `.planning/` artifacts ready for Phase 1 planning/execution.
+- **Last session:** `2026-11-12T18:22:00Z`
+- **Stopped at:** Completed `01-02-PLAN.md` (`supabase/migrations/20261112000001_initial_schema.sql`).
 - **Blockers:** None.

@@ -64,6 +64,7 @@ Progress: [░░░░░░░░░░] 0%
 - All requirements locked via `/docs/01_PRD.md`–`09_Sequence_Diagrams.md` into `.gsd/SPEC.md` (`FINALIZED`).
 - Non-negotiable invariants enforced across all plans: integer cents + basis points (`10000 = 100%`), append-only `consignor_ledger` and `provenance_events`, `FOR UPDATE NOWAIT` checkout locking, and dual-state updates to `.gsd/STATE.md` + `.planning/STATE.md` + `docs/06_Plan.md`.
 - Plan 01-01 (`FOUND-01`, Task `1.1`): Initialized `resaleroute` Flutter project with locked `docs/04_TRD.md` dependencies, strict `analysis_options.yaml` rules, and feature-first Clean Architecture tree (`pubspec.lock` committed for deterministic builds).
+- Plan 01-02 (`FOUND-02`, Task `1.2`): Authored `supabase/migrations/20261112000001_initial_schema.sql` with `pgcrypto`/`pg_cron`, 6 enums, 9 tables (integer cents & bps CHECKs), 7 indexes, `handle_new_user()`, `sync_profile_claims()`, `prevent_profile_role_escalation()`, strict 9-table RLS, append-only revokes on `consignor_ledger`/`provenance_events`, and column-level `boutiques.webhook_secret` protection.
 
 ### Pending Todos
 
