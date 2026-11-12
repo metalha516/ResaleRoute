@@ -1,0 +1,33 @@
+{
+  "contract": "1.0.0",
+  "flavor": "core",
+  "milestone": null,
+  "phases": [
+    {
+      "number": "1",
+      "name": "Database, RLS, and Authentication Foundation",
+      "status": "pending"
+    },
+    {
+      "number": "2",
+      "name": "Core Backend Logic, Calculators, and Edge Functions",
+      "status": "pending"
+    },
+    {
+      "number": "3",
+      "name": "Flutter UI Integration and Role Workflows",
+      "status": "pending"
+    },
+    {
+      "number": "4",
+      "name": "Edge-Case Hardening and Automated Tests",
+      "status": "pending"
+    }
+  ],
+  "next": {
+    "command": "/gsd-progress --next",
+    "label": "Advance to the next step",
+    "reason": "Phase 1 of 4 · 0% · executing"
+  },
+  "updated_at": "2026-11-12T17:56:35.125Z"
+}
