@@ -15,11 +15,11 @@
 **Depends on:** Nothing (Foundation Phase)
 
 ### Tasks (`docs/06_Plan.md` 1.1 – 1.5)
-- [ ] **1.1** Initialize Flutter project (`resaleroute`) with locked `pubspec.yaml` dependencies and folder structure from `04_TRD.md`.
-- [ ] **1.2** Apply `supabase/migrations/20261112000001_initial_schema.sql` containing enums, tables, indexes, and RLS policies from `05_Schema.md`.
-- [ ] **1.3** Apply `supabase/migrations/20261112000002_rpc_functions.sql` containing atomic stored procedures (`complete_item_intake`, `submit_auth_verdict`, `process_order_and_split`, `resolve_dispute`) from `08_TDD.md` and `09_Sequence_Diagrams.md`.
-- [ ] **1.4** Implement `app_colors.dart`, `app_typography.dart`, and `app_theme.dart` with exact dark/light hex tokens from `03_UI_Spec.md`.
-- [ ] **1.5** Build `AuthRepository`, Riverpod `authStateProvider`, and `app_router.dart` with role-based redirect guards matching `02_AppFlow.md`.
+- [x] **1.1** Initialize Flutter project (`resaleroute`) with locked `pubspec.yaml` dependencies and folder structure from `04_TRD.md`.
+- [x] **1.2** Apply `supabase/migrations/20261112000001_initial_schema.sql` containing enums, tables, indexes, and RLS policies from `05_Schema.md`.
+- [x] **1.3** Apply `supabase/migrations/20261112000002_rpc_functions.sql` containing atomic stored procedures (`complete_item_intake`, `submit_auth_verdict`, `process_order_and_split`, `resolve_dispute`) from `08_TDD.md` and `09_Sequence_Diagrams.md` *(SQL verified locally; live remote DB push deferred per user instruction to use Firebase later)*.
+- [x] **1.4** Implement `app_colors.dart`, `app_typography.dart`, and `app_theme.dart` with exact dark/light hex tokens from `03_UI_Spec.md`.
+- [x] **1.5** Build `AuthRepository`, Riverpod `authStateProvider`, and `app_router.dart` with role-based redirect guards matching `02_AppFlow.md`.
 
 ### Verification Criteria
 1. `flutter analyze` passes with zero errors or warnings.

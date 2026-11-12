@@ -6,7 +6,7 @@ ResaleRoute delivers an end-to-end managed resale and consignment platform acros
 
 ## Phases
 
-- [ ] **Phase 1: Database, RLS, and Authentication Foundation** - Flutter project scaffold, Postgres schema & RLS, atomic RPCs, Dark-First theme tokens, and GoRouter role guards (Tasks 1.1–1.5).
+- [x] **Phase 1: Database, RLS, and Authentication Foundation** - Flutter project scaffold, Postgres schema & RLS, atomic RPCs, Dark-First theme tokens, and GoRouter role guards (Tasks 1.1–1.5). (completed 2026-11-13)
 - [ ] **Phase 2: Core Backend Logic, Calculators, and Edge Functions** - Freezed domain models, pure Dart integer-cent/SHA-256 calculators, and `evaluate-markdowns` / `multichannel-sync` / `process-payout` Edge Functions (Tasks 2.1–2.5).
 - [ ] **Phase 3: Flutter UI Integration and Role Workflows** - All 6 role-workflow screen groups (`ItemIntakeWizard`, `AuthInspection`, `InventoryMarkdown`, `ConsignorPortal/Ledger`, `ShopperCatalog/Provenance`, `DisputeResolution/Sustainability`) (Tasks 3.1–3.6).
 - [ ] **Phase 4: Edge-Case Hardening and Automated Tests** - `OfflineIntakeQueueService` idempotent sync, `test/unit/` math/hash suite, and `test/widget/` RBAC/concurrency/escrow suite (Tasks 4.1–4.3).
@@ -22,7 +22,7 @@ ResaleRoute delivers an end-to-end managed resale and consignment platform acros
   2. SQL migrations create all 6 enums, 9 tables, 7 indexes, `sync_profile_claims()` trigger, strict RLS (append-only `consignor_ledger` and `provenance_events`), and 4 atomic `SECURITY DEFINER` RPCs.
   3. `AppColors`, `AppTypography`, and `AppTheme` match `03_UI_Spec.md` with `ThemeMode.dark` default and zero drop shadows in dark mode.
   4. `app_router.dart` enforces role guards across all 12 routes using `authStateProvider` and `app_metadata.role`.
-**Plans**: 6/6 plans executed covering 5 atomic tasks (`1.1` – `1.5` from `docs/06_Plan.md`)
+**Plans**: 6/6 plans complete covering 5 atomic tasks (`1.1` – `1.5` from `docs/06_Plan.md`)
 
 Plans:
 **Wave 1**
@@ -95,7 +95,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Database, RLS, and Authentication Foundation | 6/6 | In Progress | - |
+| 1. Database, RLS, and Authentication Foundation | 6/6 | Complete    | 2026-11-13 |
 | 2. Core Backend Logic, Calculators, and Edge Functions | 0/5 | Not started | - |
 | 3. Flutter UI Integration and Role Workflows | 0/6 | Not started | - |
 | 4. Edge-Case Hardening and Automated Tests | 0/3 | Not started | - |
