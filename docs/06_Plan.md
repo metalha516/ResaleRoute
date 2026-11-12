@@ -3,7 +3,7 @@
 > **Agent Instruction:** Execute tasks strictly in sequential order. After completing and verifying each task via `flutter analyze` and tests, mark `[ ]` as `[x]` and append the modified file paths.
 
 ## Phase 1: Database, RLS & Authentication Foundation
-- [ ] **1.1** Initialize Flutter project (`resaleroute`) with locked `pubspec.yaml` dependencies and folder structure from `04_TRD.md`.
+- [x] **1.1** Initialize Flutter project (`resaleroute`) with locked `pubspec.yaml` dependencies and folder structure from `04_TRD.md`. (`pubspec.yaml`, `pubspec.lock`, `analysis_options.yaml`, `lib/main.dart`, `test/widget_test.dart`, `lib/core/`, `lib/features/`, `supabase/`, `test/`)
 - [ ] **1.2** Apply `supabase/migrations/20261112000001_initial_schema.sql` containing enums, tables, indexes, and RLS policies from `05_Schema.md`.
 - [ ] **1.3** Apply `supabase/migrations/20261112000002_rpc_functions.sql` containing atomic stored procedures (`complete_item_intake`, `submit_auth_verdict`, `process_order_and_split`, `resolve_dispute`) from `08_TDD.md`.
 - [ ] **1.4** Implement `app_colors.dart`, `app_typography.dart`, and `app_theme.dart` with exact dark/light hex tokens from `03_UI_Spec.md`.

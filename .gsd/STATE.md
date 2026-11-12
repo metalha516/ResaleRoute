@@ -6,21 +6,21 @@
 
 ## Current Position
 - **Active Phase:** Phase 1 — Database, RLS, and Authentication Foundation
-- **Next Task:** `1.1` — Initialize Flutter project (`resaleroute`) with locked `pubspec.yaml` dependencies and folder structure from `04_TRD.md`
-- **Status:** Ready to execute Phase 1 (6 plans verified across Waves 1–4; `0` blockers, `0` warnings)
-- **Overall Progress:** `0 / 19` atomic tasks complete (`0%`)
-- **Last Activity:** `2026-11-12` — Phase 1 execution plans (`01-01` through `01-06`) created and verified by `gsd-plan-checker`.
+- **Next Task:** `1.2` — Apply `supabase/migrations/20261112000001_initial_schema.sql` containing enums, tables, indexes, and RLS policies from `05_Schema.md`
+- **Status:** Executing Phase 1 (Plan 01-01 complete; proceeding to Plan 01-02)
+- **Overall Progress:** `1 / 19` atomic tasks complete (`5%`)
+- **Last Activity:** `2026-11-12` — Completed Task `1.1` (Plan `01-01`, `FOUND-01`): Flutter project `resaleroute` initialized, `pubspec.yaml` locked, Clean Architecture directory tree scaffolded, `flutter analyze` & `flutter test` passed.
 
 ## Non-Negotiable Invariants Checklist
 - [x] `SPEC.md` status locked as `FINALIZED`
 - [ ] Integer cents (`int`) and basis points (`10000 = 100%`) enforced across all models, calculators, RPCs, and Edge Functions (zero `double` for currency)
 - [ ] `consignor_ledger` and `provenance_events` strictly append-only (`INSERT` only; zero `UPDATE`/`DELETE`)
-- [ ] Dual-state tracking active: every completed `gsd-executor` task updates **both** `.gsd/STATE.md` (plus `.planning/STATE.md`) **and** checks off `[x]` in `docs/06_Plan.md`
+- [x] Dual-state tracking active: every completed `gsd-executor` task updates **both** `.gsd/STATE.md` (plus `.planning/STATE.md`) **and** checks off `[x]` in `docs/06_Plan.md`
 
 ## Phase Task Ledger
 | Phase | Task | Description | Status |
 | :--- | :--- | :--- | :--- |
-| Phase 1 | 1.1 | Flutter project & folder structure (`04_TRD.md`) | `[ ]` Pending |
+| Phase 1 | 1.1 | Flutter project & folder structure (`04_TRD.md`) | `[x]` Complete |
 | Phase 1 | 1.2 | Initial PostgreSQL schema, enums, indexes, RLS (`05_Schema.md`) | `[ ]` Pending |
 | Phase 1 | 1.3 | Atomic RPC functions (`08_TDD.md`, `09_Sequence_Diagrams.md`) | `[ ]` Pending |
 | Phase 1 | 1.4 | Design tokens & theme (`03_UI_Spec.md`) | `[ ]` Pending |
