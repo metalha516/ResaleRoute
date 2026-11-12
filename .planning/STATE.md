@@ -3,16 +3,16 @@ gsd_state_version: "1.0"
 current_phase: 1
 current_phase_name: Database, RLS, and Authentication Foundation
 status: executing
-stopped_at: Completed 01-03-PLAN.md
-last_updated: "2026-11-12T18:36:28.797Z"
+stopped_at: Completed 01-04-PLAN.md
+last_updated: "2026-11-12T18:45:48.021Z"
 last_activity: 2026-11-13
 last_activity_desc: Phase 1 execution started
-state_head: 42fff7292701c7b3d1ac80771dd03e83c91c1fbc
+state_head: f6c1bf538ad5112844686f0f84b567520eec1c1a
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 6
-  completed_plans: 3
+  completed_plans: 4
   percent: 0
 ---
 
@@ -28,9 +28,9 @@ See: .planning/PROJECT.md (updated 2026-11-12) and .gsd/SPEC.md (`FINALIZED`)
 ## Current Position
 
 Phase: 1 (Database, RLS, and Authentication Foundation) — EXECUTING
-Plan: 4 of 6
-Status: Ready to execute Plan 01-04 (Plan 01-03 complete; remote DB push deferred per user instruction)
-Last activity: 2026-11-13 — Plan 01-03 completed (`FOUND-03` SQL verified locally; live DB push skipped/deferred for Firebase later)
+Plan: 5 of 6
+Status: Ready to execute Plan 01-05 (Plan 01-04 complete; remote DB push from 01-03 remains deferred per user instruction)
+Last activity: 2026-11-13 — Plan 01-04 completed (`FOUND-04`: Dark-First Editorial Vault tokens, typography, spacing/sustainability constants, and `AppTheme` verified via `flutter analyze`)
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -58,6 +58,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01 P01 | 6 min | 3 tasks | 165 files |
 | Phase 01 P02 | 4 min | 3 tasks | 4 files |
 | Phase 01 P03 | 11 min | 3 tasks | 4 files |
+| Phase 01 P04 | 6 min | 3 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -72,6 +73,7 @@ Progress: [░░░░░░░░░░] 0%
 - [Phase 01]: Hardcoded default 'shopper' role in handle_new_user() and blocked client role/boutique_id mutations via prevent_profile_role_escalation() (T-01-03).
 - [Phase 01]: Protected boutiques.webhook_secret via column-level grants; PostgREST/client queries must project explicit non-secret columns instead of SELECT * (T-01-05).
 - [Phase 01]: Live Supabase DB push in Plan 01-03 Task 3 was skipped/deferred per user direction (using Firebase later, skip database work for now); both PostgreSQL migrations remain verified locally on disk while backend connection/migration to Firebase is deferred until user connects it later.
+- [Phase 01]: Exposed AppTheme.cardShadows(context) returning empty shadows in dark mode and lightCardShadow in light mode; kept all financial thresholds in integer cents.
 
 ### Pending Todos
 
@@ -89,6 +91,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-11-12T18:36:28.731Z
-Stopped at: Completed 01-03-PLAN.md
+Last session: 2026-11-12T18:45:47.965Z
+Stopped at: Completed 01-04-PLAN.md
 Resume file: None
