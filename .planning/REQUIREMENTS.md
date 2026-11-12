@@ -6,7 +6,7 @@
 ## v1 Requirements
 
 ### Phase 1: Foundation, Database, RLS & Auth
-- [ ] **FOUND-01**: Initialize Flutter project (`resaleroute`) with locked dependencies and feature-first folder tree (`04_TRD.md`, Task 1.1)
+- [x] **FOUND-01**: Initialize Flutter project (`resaleroute`) with locked dependencies and feature-first folder tree (`04_TRD.md`, Task 1.1)
 - [ ] **FOUND-02**: Apply `20261112000001_initial_schema.sql` with 6 enums, 9 tables, 7 indexes, `sync_profile_claims()` trigger, and strict RLS (`05_Schema.md`, Task 1.2)
 - [ ] **FOUND-03**: Apply `20261112000002_rpc_functions.sql` with atomic RPCs (`complete_item_intake`, `submit_auth_verdict`, `process_order_and_split`, `resolve_dispute`) (`08_TDD.md`, Task 1.3)
 - [ ] **FOUND-04**: Implement `app_colors.dart`, `app_typography.dart`, and `app_theme.dart` matching Dark/Light tokens and zero dark-mode shadows (`03_UI_Spec.md`, Task 1.4)
@@ -46,7 +46,7 @@
 
 | Requirement | Phase | Task | Status |
 |-------------|-------|------|--------|
-| FOUND-01 | Phase 1 | 1.1 | Pending |
+| FOUND-01 | Phase 1 | 1.1 | Complete |
 | FOUND-02 | Phase 1 | 1.2 | Pending |
 | FOUND-03 | Phase 1 | 1.3 | Pending |
 | FOUND-04 | Phase 1 | 1.4 | Pending |
