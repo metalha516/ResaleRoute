@@ -187,23 +187,27 @@ class _AuthRouterRefreshNotifier extends ChangeNotifier {
   void notify() => notifyListeners();
 }
 
-/// Provides the application-wide [GoRouter] wired to reactive [authStateProvider].
+/// Provides the application-wide [GoRouter] wired to reactive [authStateProvider]
+/// transitions via [currentUserProvider].
 final appRouterProvider = Provider<GoRouter>((ref) {
   final refreshNotifier = _AuthRouterRefreshNotifier();
-  ref.listen<AsyncValue<AppUser?>>(
-    authStateProvider,
-    (_, __) => refreshNotifier.notify(),
+  var currentUser = ref.read(currentUserProvider);
+  ref.listen<AppUser?>(
+    currentUserProvider,
+    (_, next) {
+      currentUser = next;
+      refreshNotifier.notify();
+    },
   );
 
   final router = GoRouter(
     initialLocation: RoutePaths.shopCatalog,
     refreshListenable: refreshNotifier,
     redirect: (context, state) {
-      final user = ref.read(currentUserProvider);
       return resolveRoleRedirect(
         matchedLocation: state.matchedLocation,
         fullUri: state.uri.toString(),
-        user: user,
+        user: currentUser,
         redirectUrl: state.uri.queryParameters['redirectUrl'],
       );
     },
