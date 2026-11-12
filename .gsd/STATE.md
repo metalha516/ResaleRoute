@@ -6,10 +6,10 @@
 
 ## Current Position
 - **Active Phase:** Phase 1 — Database, RLS, and Authentication Foundation
-- **Next Task:** `1.5` — Build `AuthRepository`, Riverpod `authStateProvider`, and `app_router.dart` with role-based redirect guards matching `02_AppFlow.md`
-- **Status:** Executing Phase 1 (Plan 01-04 complete; proceeding to `01-05`)
-- **Overall Progress:** `4 / 19` atomic tasks complete (`21%`)
-- **Last Activity:** `2026-11-12` — Completed Plan `01-04` (`FOUND-04`, Task `1.4`): Implemented `app_colors.dart`, `app_typography.dart`, `sustainability_constants.dart`, and `app_theme.dart` with Dark-First Editorial Vault hex tokens, zero dark-mode shadows, and `1px` `#262E3B` borders; `flutter analyze` passed with zero issues.
+- **Next Task:** `1.5` (Part 2 / Plan `01-06`) — Wire `app_router.dart`, `AuthLoginScreen`, `app.dart`, `main.dart`, and `test/widget/router_guard_test.dart`
+- **Status:** Executing Phase 1 (Plan 01-05 complete; proceeding to `01-06`)
+- **Overall Progress:** `4 / 19` atomic tasks complete (`21%`; Task `1.5` Part 1 shipped in `01-05`)
+- **Last Activity:** `2026-11-12` — Completed Plan `01-05` (`FOUND-05` part 1): Implemented `UserRole`/`AppUser` (`appMetadata`-only claims), `AuthRepository`/`SupabaseAuthRepository`, Riverpod `authStateProvider`/`currentUserProvider`, and all 11 Editorial Vault navigable route screen shells; `flutter analyze` passed with zero issues.
 
 ## Non-Negotiable Invariants Checklist
 - [x] `SPEC.md` status locked as `FINALIZED`
@@ -41,6 +41,6 @@
 | Phase 4 | 4.3 | Widget & integration tests (`test/widget/`) | `[ ]` Pending |
 
 ## Session Continuity
-- **Last session:** `2026-11-12T18:43:00Z`
-- **Stopped at:** Completed `01-04-PLAN.md` (`FOUND-04`, Task `1.4`). Design tokens, typography scale, spacing/sustainability constants, and `AppTheme` (`darkTheme` zero-shadow + `lightTheme` subtle elevation) verified via `flutter analyze`.
-- **Blockers:** None (remote DB push from Task 1.3 remains deferred until Firebase connection; proceeding with `01-05` auth/router).
+- **Last session:** `2026-11-12T18:54:46Z`
+- **Stopped at:** Completed `01-05-PLAN.md` (`FOUND-05` part 1). `UserRole`/`AppUser`, `AuthRepository`/`SupabaseAuthRepository`, Riverpod `authStateProvider`/`currentUserProvider`, and 11 Editorial Vault route screen shells verified via `flutter analyze`.
+- **Blockers:** None (remote DB push from Task 1.3 remains deferred until Firebase connection; proceeding with `01-06` GoRouter + login screen + widget tests).
